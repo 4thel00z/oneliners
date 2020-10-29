@@ -4,4 +4,4 @@ This repository is about bash/python/programming language oneliners that can do 
 
 ## TOC
 
-* [Crack a ssh private key]()
+* [Crack a ssh private key](https://raw.githubusercontent.com/4thel00z/oneliners/master/scripts/crack_ssh_password.zsh)
