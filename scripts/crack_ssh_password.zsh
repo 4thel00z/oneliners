@@ -9,5 +9,5 @@
 
 echo arguments: $1 $2
 
-docker run  --entrypoint=ssh2john -v "$1:/key" -it adamoss/john-the-ripper /key > hash.txt && docker run -it -v "$PWD/hash.txt:/crackme.txt" -v "$2:/wordlist.txt" adamoss/john-the-ripper /crackme.txt --wordlist=/wordlist.txt
+docker run  --entrypoint=ssh2john -v "$1:/key" -t adamoss/john-the-ripper /key > hash.txt && docker run -t -v "$PWD/hash.txt:/crackme.txt" -v "$2:/wordlist.txt" adamoss/john-the-ripper /crackme.txt --wordlist=/wordlist.txt
 
