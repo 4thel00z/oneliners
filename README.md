@@ -14,6 +14,13 @@ curl  --proto '=https' --tlsv1.2 -L -sSf https://shortly.fun/crackssh | zsh -s <
 curl  --proto '=https' --tlsv1.2 -L -sSf https://shortly.fun/crackssh | bash -s <path-to-private-key> <path-to-wordlist> 
 ```
 
+* [Setup a cool go project template](https://github.com/4thel00z/service_templated)
+
+```
+# Ideally you do this in your ~/go/src/github.com/<your-gihub-username>/ or other smart places
+curl  --proto '=https' --tlsv1.2 -L -sSf https://shortly.fun/boilerplate | bash -s <project_name>
+```
+
 ## License
 
 This project is licensed under the GPL-3 license.
