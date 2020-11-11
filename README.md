@@ -42,6 +42,16 @@ curl  --proto '=https' --tlsv1.2 -L -sSf https://shortly.fun/upload-gist | zsh -
 curl  --proto '=https' --tlsv1.2 -L -sSf  | base64 -d | gpg --decrypt
 ```
 
+* [Crack sam_hashes](https://shortly.fun/cracksam)
+
+```
+# Download via: 
+curl  --proto '=https' --tlsv1.2 -L -sSf https://shortly.fun/cracksam | zsh -s <absolute-path-to-hashes> <absolute-path-to-wordlist>
+
+# or in case you haven't installed zsh yet or use fish 
+curl  --proto '=https' --tlsv1.2 -L -sSf https://shortly.fun/cracksam | bash -s <absolute-path-to-hashes> <absolute-path-to-wordlist>
+```
+
 ## License
 
 This project is licensed under the GPL-3 license.
