@@ -54,6 +54,23 @@ curl  --proto '=https' --tlsv1.2 -L -sSf https://shortly.fun/cracksam | zsh -s <
 curl  --proto '=https' --tlsv1.2 -L -sSf https://shortly.fun/cracksam | bash -s <absolute-path-to-hashes> <absolute-path-to-wordlist>
 ```
 
+
+* [Disable ssl verification](https://shortly.fun/no-ssl-verification)
+
+If you want to disable ssl verification for a software which uses openssl or gnutls as a shared library you can do the following:
+```
+# Download via: 
+curl  --proto '=https' --tlsv1.2 -L -sSf https://shortly.fun/no-ssl-verification | zsh -s <some-command-you-want-to-disable-ssl-verification-for>
+
+# or in case you haven't installed zsh yet or use fish 
+curl  --proto '=https' --tlsv1.2 -L -sSf https://shortly.fun/no-ssl-verification | bash -s <some-command-you-want-to-disable-ssl-verification-for>
+```
+
+
+
+
+
+
 ## License
 
 This project is licensed under the GPL-3 license.
