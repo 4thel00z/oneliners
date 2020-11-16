@@ -67,9 +67,13 @@ curl  --proto '=https' --tlsv1.2 -L -sSf https://shortly.fun/no-ssl-verification
 ```
 
 
+* [Generate a report](https://github.com/4thel00z/reportgen)
 
+In case you are a l33t h4x0r who wants to render the nicest OSCP pentesting report or some boring stuff documentation for your newest JS hipster framework with 666 stars you can use the following command on a markdown that looks like [this](https://raw.githubusercontent.com/4thel00z/reportgen/master/example.md):
 
-
+```
+curl  --proto '=https' --tlsv1.2 -L -sSf  https://shortly.fun/genreport  | zsh -s example.md example.pdf
+```
 
 ## License
 
