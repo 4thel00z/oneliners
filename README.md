@@ -75,6 +75,16 @@ In case you are a l33t h4x0r who wants to render the nicest OSCP pentesting repo
 curl  --proto '=https' --tlsv1.2 -L -sSf  https://shortly.fun/genreport  | zsh -s example.md example.pdf
 ```
 
+* [Opne url in wayback machine (private firefox window)](https://shortly.fun/wayback)
+
+In case you want to check for a url in a private firefox window in the [Wayback machine](https://archive.org/) you can use the following script:
+
+```
+curl  --proto '=https' --tlsv1.2 -L -sSf  https://shortly.fun/wayback  | zsh -s https://example.com
+```
+
+
+
 ## License
 
 This project is licensed under the GPL-3 license.
