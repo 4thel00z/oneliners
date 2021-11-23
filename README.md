@@ -14,7 +14,7 @@ curl  --proto '=https' --tlsv1.2 -L -sSf https://shortly.fun/crackssh | zsh -s <
 curl  --proto '=https' --tlsv1.2 -L -sSf https://shortly.fun/crackssh | bash -s <path-to-private-key> <path-to-wordlist> 
 ```
 
-* [Setup a cool go project template](https://github.com/4thel00z/service_templated)
+* [Setup a cool go project template](https://github.com/4thel00z/d)
 
 ```
 # Ideally you do this in your ~/go/src/github.com/<your-gihub-username>/ or other smart places
@@ -75,7 +75,7 @@ In case you are a l33t h4x0r who wants to render the nicest OSCP pentesting repo
 curl  --proto '=https' --tlsv1.2 -L -sSf  https://shortly.fun/genreport  | zsh -s example.md example.pdf
 ```
 
-* [Opne url in wayback machine (private firefox window)](https://shortly.fun/wayback)
+* [Open url in wayback machine (private firefox window)](https://shortly.fun/wayback)
 
 In case you want to check for a url in a private firefox window in the [Wayback machine](https://archive.org/) you can use the following script:
 
@@ -83,7 +83,14 @@ In case you want to check for a url in a private firefox window in the [Wayback 
 curl  --proto '=https' --tlsv1.2 -L -sSf  https://shortly.fun/wayback  | zsh -s https://example.com
 ```
 
+* Debugging postgres - Find longrunning queries
 
+If you are debugging your postgres instance and have [pgcli]() installed, you can find out which query it is via:
+You will have to have `$DB_HOST`, `$DB_USERNAME` and `$DB_NAME` set appropriately.
+
+```
+echo "WITH long_running AS (SELECT pid, now() - pg_stat_activity.query_start AS duration, query, state FROM pg_stat_activity WHERE (now() - pg_stat_activity.query_start) > interval '1 minutes' and state = 'active') SELECT * from long_running;"| pgcli -h $DB_HOST -U $DB_USERNAME -d $DB_NAME 
+```
 
 ## License
 
