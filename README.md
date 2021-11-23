@@ -85,7 +85,7 @@ curl  --proto '=https' --tlsv1.2 -L -sSf  https://shortly.fun/wayback  | zsh -s 
 
 * Debugging postgres - Find longrunning queries
 
-If you are debugging your postgres instance and have [pgcli]() installed, you can find out which query it is via:
+If you are debugging your postgres instance and have [pgcli](https://github.com/dbcli/pgcli) installed, you can find out which query it is via:
 You will have to have `$DB_HOST`, `$DB_USERNAME` and `$DB_NAME` set appropriately.
 
 ```
