@@ -92,6 +92,12 @@ You will have to have `$DB_HOST`, `$DB_USERNAME` and `$DB_NAME` set appropriatel
 echo "WITH long_running AS (SELECT pid, now() - pg_stat_activity.query_start AS duration, query, state FROM pg_stat_activity WHERE (now() - pg_stat_activity.query_start) > interval '1 minutes' and state = 'active') SELECT * from long_running;"| pgcli -h $DB_HOST -U $DB_USERNAME -d $DB_NAME 
 ```
 
+* Login docker to point to your private ecr registry
+
+```
+export REGION=eu-central-1; aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $(aws sts get-caller-identity --query Account --output text).dkr.ecr.$REGION.amazonaws.com
+
+```
 ## License
 
 This project is licensed under the GPL-3 license.
